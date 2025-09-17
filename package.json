@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "uvicorn main:app --host 127.0.0.1 --port 8000 --reload --reload-dir .",
+    "prod": "uvicorn main:app --host 0.0.0.0 --port 8000",
+    "format": "ruff format .",
+    "lint": "ruff check .",
+    "lint:fix": "ruff check . --fix",
+    "test": "pytest -v",
+    "install-py": "pip install -r requirements.txt",
+    "dc-up": "docker compose -p finance-hub up -d --build",
+    "dc-down": "docker compose -p finance-hub down"
+  }
+}

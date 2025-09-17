@@ -1,0 +1,15 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  },
+
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "cSpell.words": [
+    "macd",
+    "ohlcv"
+  ]
+}

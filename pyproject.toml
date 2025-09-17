@@ -1,0 +1,40 @@
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py312"
+
+# Activa el formateador integrado (Black-style)
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.ruff.lint]
+# Select rulesets:
+# E = pycodestyle, F = pyflakes, I = isort, B = bugbear, S = bandit (seguridad)
+select = ["E", "F", "I", "B", "S"]
+
+# Ignora lo más molesto / redundante
+ignore = [
+    "E501",  # Longitud de línea (ya lo controla el formatter)
+    "B008",  # No advertir sobre dependencias en funciones FastAPI
+    "S101",  # Permitir 'assert' (útil en tests)
+]
+
+# Opcional: excluir carpetas típicas
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint.isort]
+# Orden de imports: primero estándar, luego externos, luego internos
+combine-as-imports = true
+force-single-line = false
+known-first-party = ["app"]
+
